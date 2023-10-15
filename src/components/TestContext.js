@@ -5,7 +5,7 @@ import { DataContext } from '../contexts/DataContext';
 const ExampleComponent = () => {
     const { data, updateData } = useContext(DataContext);
 
-    // ทำอะไรสักอย่างกับ data
+    // ทำอะไรสักอย่างกับ datas
 
     return (
         data // รีเทิร์น JSX ที่ใช้ data
