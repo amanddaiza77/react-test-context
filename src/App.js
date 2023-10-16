@@ -3,22 +3,11 @@ import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import UserPage from './pages/UserPage';
 import AdminPage from './pages/AdminPage';
-import { UserProvider } from './contexts/UserContext';
-import { AdminProvider } from './contexts/AdminContext';
-import { SeatProvider } from './contexts/SeatContext';
 import RegistrationForm from './components/RegistrationForm';
-import RegisteredUsersTable from './components/RegisteredUsersTable';
 import AdminView from './components/AdminView';
-import SeatManagement from './components/SeatManagement';
-import { WorkProvider } from './WorkContext';
-import AdminDashboard from './components/AdminDashboard';
 import RegisteredTable from './components/RegisteredTable';
 import SeatInfo from './components/SeatInfo';
 import { RegistrationProvider } from './contexts/RegistrationContext';
-import { DataProvider } from './contexts/DataContext';
-import ExampleComponent from './components/TestContext';
-import InputName from './components/InputName';
-import ShowName from './components/ShowName';
 
 function App() {
   const [isAdminView, setIsAdminView] = useState('');
@@ -27,36 +16,7 @@ function App() {
     setIsAdminView(tab);
   };
   return (
-    // <UserProvider>
-    //   <AdminProvider>
-    //     <SeatProvider>
-    //       <Router>
-    //         <Routes>
-    //           <Route path="/admin" element={<AdminPage />} />
-    //           <Route path="/" element={<UserPage />} />
-    //         </Routes>
-    //       </Router>
-    //     </SeatProvider>
-    //   </AdminProvider>
-    // </UserProvider >
     // ----------------------------------------start---------------------------
-    // <UserProvider>
-    //   <AdminProvider>
-    //     <SeatProvider>
-    //       <div>
-    //         <h1>User Registration</h1>
-    //         <RegistrationForm />
-    //         <RegisteredUsersTable />
-    //       </div>
-    //       <div>
-    //         <h1>Admin View</h1>
-    //         <AdminView />
-    //         <SeatManagement />
-    //       </div>
-    //     </SeatProvider>
-    //   </AdminProvider>
-    // </UserProvider>
-    // -------------------------------------------end----------------------------------------
     <RegistrationProvider>
       <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
         <li className="mr-2">
@@ -95,39 +55,9 @@ function App() {
             <SeatInfo />
           </div>
         </div>
-        {/* <button onClick={toggleView('admin')}>
-          Switch to {isAdminView ? 'User' : 'Admin'} View
-        </button> */}
-        {/* <SeatInfo /> */}
       </div>
     </RegistrationProvider>
-    // ------------------------------------------------------------end
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    // --------------------------------test start---------------------
-    // <Router>
-    //   <DataProvider>
-    //     <Routes>
-    //       <Route path="/" element={<InputName />} />
-    //       <Route path="/show" element={<ShowName />} />
-    //     </Routes>
-    //   </DataProvider>
-    // </Router>
-    // --------------------------------test end---------------------
+    // -------------------------------------------end----------------------------------------
   );
 }
 

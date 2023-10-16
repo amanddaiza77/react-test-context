@@ -13,9 +13,9 @@ function AdminView() {
   const [newSeat, setNewSeat] = useState('');
   const [editId, setEditId] = useState(null);
   const data = state.registrations;
-  const handleLocationChange = (e) => {
-    dispatch({ type: 'UPDATE_LOCATION', payload: e.target.value });
-  };
+  // const handleLocationChange = (e) => {
+  //   dispatch({ type: 'UPDATE_LOCATION', payload: e.target.value });
+  // };
   const getData = () => {
     let filteredData = data.filter(item => {
       const values = Object.values(item).join(' ').toLowerCase();
